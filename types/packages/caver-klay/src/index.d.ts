@@ -94,7 +94,7 @@ export class DeprecatedKlayRPC {
     isMining: RpcCallToMethod['klay_mining']
     isSyncing: RpcCallToMethod['klay_syncing']
 
-    call: RpcCallToMethod['klay_call']
+    call: RpcCallToMethod['eth_call']
     estimateGas: RpcCallToMethod['eth_estimateGas']
     estimateComputationCost: RpcCallToMethod['klay_estimateComputationCost']
 
