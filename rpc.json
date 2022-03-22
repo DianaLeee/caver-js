@@ -94,13 +94,13 @@
 	},
 	{
 		"name": "call",
-		"call": "eth_call",
+		"call": "klay_call",
 		"params": 2,
 		"inputFormatter": ["inputCallFormatter", "inputDefaultBlockNumberFormatter"]
 	},
 	{
 		"name": "estimateGas",
-		"call": "klay_estimateGas",
+		"call": "eth_estimateGas",
 		"params": 1,
 		"inputFormatter": ["inputCallFormatter"],
 		"outputFormatter": "hexToNumber"

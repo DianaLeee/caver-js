@@ -1456,7 +1456,7 @@ class Klay {
              * @property {string} [to] - The address the transaction is directed to. This can be omitted when testing the deployment of a new contract.
              * @property {string} [input] - The hash of the method signature and encoded parameters. You can use {@link ABI#encodeFunctionCall|caver.abi.encodeFunctionCall}.
              * @property {string} [from] - The address the transaction is sent from.
-             * @property {string} [gas] - The gas provided for the transaction execution. `eth_call`(which is called via `caver.rpc.klay.call`) consumes zero gas, but this parameter may be needed by some executions.
+             * @property {string} [gas] - The gas provided for the transaction execution. `klay_call`(which is called via `caver.rpc.klay.call`) consumes zero gas, but this parameter may be needed by some executions.
              * @property {string} [gasPrice] - The gasPrice used for each paid gas.
              * @property {string} [value] - The value sent with this transaction in `peb`.
              */
@@ -1481,7 +1481,7 @@ class Klay {
              */
             new Method({
                 name: 'call',
-                call: 'eth_call',
+                call: 'klay_call',
                 params: 2,
                 inputFormatter: [formatters.inputCallFormatter, formatters.inputDefaultBlockNumberFormatter],
             }),
@@ -1506,7 +1506,7 @@ class Klay {
              */
             new Method({
                 name: 'estimateGas',
-                call: 'klay_estimateGas',
+                call: 'eth_estimateGas',
                 params: 1,
                 inputFormatter: [formatters.inputCallFormatter],
             }),
