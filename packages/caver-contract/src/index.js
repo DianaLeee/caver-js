@@ -1493,7 +1493,7 @@ Contract.prototype._executeMethod = async function _executeMethod() {
 
         if (args.type === 'call') {
             payload.params.push(formatters.inputDefaultBlockNumberFormatter.call(this._parent, args.defaultBlock))
-            payload.method = 'klay_call'
+            payload.method = 'eth_call'
             payload.format = this._parent._decodeMethodReturn.bind(null, this._method.outputs)
         } else {
             payload.method = 'klay_sendTransaction'
@@ -1522,7 +1522,7 @@ Contract.prototype._executeMethod = async function _executeMethod() {
 
             const call = new Method({
                 name: 'call',
-                call: 'klay_call',
+                call: 'eth_call',
                 params: 2,
                 inputFormatter: [formatters.inputCallFormatter, formatters.inputDefaultBlockNumberFormatter],
                 // add output formatter for decoding

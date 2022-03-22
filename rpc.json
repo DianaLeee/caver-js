@@ -94,7 +94,7 @@
 	},
 	{
 		"name": "call",
-		"call": "klay_call",
+		"call": "eth_call",
 		"params": 2,
 		"inputFormatter": ["inputCallFormatter", "inputDefaultBlockNumberFormatter"]
 	},
